@@ -18,3 +18,13 @@ Sourcegraph comes pre-built with Grafana dashboards that are powered by Promethe
 * Instrument the Browser agent
 * Monitor the psql databases
 * ... more tbd?!
+
+
+### Pre-reqs / tools I used
+
+* New Relic account
+* Macbook Pro
+* Docker-desktop
+* Sourcegraph docker-compose deployment
+* Visual Studio Code
+* [Docker in Visual Studio Code Extension](https://code.visualstudio.com/docs/containers/overview)
