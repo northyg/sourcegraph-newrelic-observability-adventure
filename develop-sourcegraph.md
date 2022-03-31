@@ -26,7 +26,11 @@ $ `git branch YOUR_BRANCH_NAME`
 
 $ `git checkout YOUR_BRANCH_NAME`
 
-Open a new terminal tab or window to navigate the code, make changes and it will automagically update in your current Sourcegraph :)
+If you see this then you know you're good to go!
+
+<img width="623" alt="image" src="https://user-images.githubusercontent.com/27694443/160952321-fad4edfd-2e00-4d51-b32a-8dc3832612a8.png">
+
+Next, open a new terminal tab or window to navigate the code, make changes and it will automagically update in your current Sourcegraph :)
 
 I use VSC extension to easily open the code section I want in VSC
 
