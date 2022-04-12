@@ -10,14 +10,16 @@ Sourcegraph comes pre-built with Grafana dashboards that are powered by Promethe
 ### Observability goals for New Relic:
 
 * [Set up Sourcegraph dev environment](develop-sourcegraph.md)
-* [Instrument the Infrastructure agent to see container metrics for all Sourcegraphs services, i.e. Gitserver, Frontend, Repo-updater, etc](instrument-infra.md)
-* View container logs
-* See external service dependencies like Github and Gitlab
-* Create cool Dashboards that perform a similar function to those within Sourcegraph's built in Grafana
-* Instrument the Go agent and see important transactions
+* [Instrument the Infrastructure agent](instrument-infra.md)
+* Create cool Dashboards
 * Add alerting
+
+### Stretch goals...
 * Instrument the Browser agent
 * Monitor the psql databases
+* Instrument the Go agent and see important transactions
+* See external service dependencies like Github and Gitlab
+* View container logs
 * ... more tbd?!
 
 
