@@ -1,6 +1,6 @@
 ### Instrument the Infrastructure Agent with Sourcegraph Docker-Compose deployment
 
-Goal was to add the Infrastrcture agent to a Sourcegraph Docker-compose instance that was running locally in Docker Desktop. Perhaps not the best way, but this is one way that worked for me!
+Goal was to add the Infrastructure agent to a Sourcegraph Docker-compose instance that was running locally in Docker Desktop. Perhaps not the best way, but this is one way that worked for me!
 
 #### Pre-req / things I used
 
@@ -43,7 +43,7 @@ custom_attributes:
  team: your-cool-team
 ```
 
-E. Modify the existing Sourcegrpah Docker-compose file like to add the New Relic Infrastructure agent towards the top below `services:`. You can name the `container_name:` to something other than `newrelic-infra` if you'd like.
+E. Modify the existing Sourcegraph Docker-compose file like to add the New Relic Infrastructure agent towards the top below `services:`. You can name the `container_name:` to something other than `newrelic-infra` if you'd like.
 
 ```
 ➜  docker-compose git:(release) ✗ cat docker-compose.yaml 
@@ -92,10 +92,8 @@ I. Finally, check for your data in New Relic! Navigate to Infrastructure -> Host
 
 #### Summary
 
-
-
 Pro: Was relatively easy to install!
 
-Con: The agent can see the other Sourvegraph services but cannot see specifics inside of them like CPU usage, utilization, etc. Instead it reports on them as processes. For instance, all of Sourcegraph's services like Grafana, Jaeger, Gitserver, etc show up in the list. But when going to the Host > Containers > the metrics come in as 0%'s. This seems to be a limitation of running the agent as a container?
+Con: The agent can see the other Sourcegraph services but cannot see specifics inside of them like CPU usage, utilization, etc. Instead it reports on them as processes. For instance, all of Sourcegraph's services like Grafana, Jaeger, Gitserver, etc show up in the list. But when going to the Host > Containers > the metrics come in as 0%'s. After a lot of internet searching, this seems to be a limitation of running the agent as a container?
 
 
