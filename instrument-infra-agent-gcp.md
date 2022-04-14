@@ -80,4 +80,42 @@ The Installer even asked if I wanted to add Golden Signals alerts automagically:
 
 Pretty cool! 
 
+#### Modifying the newrelic-infra.yml and finding the newrelic-infra  directory
+
+* Navigate to the directory `$ cd /etc/` 
+* You should see them in the list `ls` 
+
+`newrelic-infra` has some extra files `integrations.d` and   `logging.d`. Will go over those later.
+
+#### Add custom attributes to the `newrelic-infra.yml`
+
+* [Infra custom attribute doc](https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/configuration/infrastructure-agent-configuration-settings/#custom-attributes)
+
+Open the infra file in nano or vim. Add sudo so you can write changes and not just read.
+
+`sudo vim newrelic-infra.yml`
+
+Decide what you want to custom attributes you want to add! For now I will add some custom names:
+
+```
+custom_attributes:
+  environment: nr-demo
+  service: data nerd service
+  team: data-nerd
+```
+
+And optionally you can change the reported host name:
+
+`display_name: teslaOne`
+
+[Restart infra agent docs](https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent/manage-your-agent/start-stop-restart-infrastructure-agent/)
+
+`sudo systemctl restart newrelic-infra`
+
+In the New Relic Host UI you should see the changes in the Activity Stream:
+
+![image](https://user-images.githubusercontent.com/27694443/163326114-54c74f88-0427-4d1d-8bed-3df24605cb4e.png)
+
+
+
 
