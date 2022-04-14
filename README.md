@@ -10,7 +10,7 @@ Sourcegraph comes pre-built with Grafana dashboards that are powered by Promethe
 ### Observability goals for New Relic:
 
 * [Set up Sourcegraph dev environment](develop-sourcegraph.md)
-* [Instrument the Infrastructure agent](instrument-infra-locally.md)
+* [Instrument the Infrastructure agent locally](instrument-infra-locally.md)
 * Create cool Dashboards
 * Add alerting
 
