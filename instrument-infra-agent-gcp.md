@@ -19,8 +19,9 @@ Sourcegraph / repo linking Note:
 
 In order to link your repo with your code host provider, you'll need to do some extra steps. The Sourcegraph build script from their docs, will not work unless you do this first.
 
-Example for Github: 
+Examples: 
 * https://cloud.google.com/build/docs/automating-builds/build-repos-from-github
+* https://cloud.google.com/source-repositories/docs/cloning-repositories
 
 Update: The Sourecgraph GCP build script failed and decided to press to other matters for now.
 
