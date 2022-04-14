@@ -23,7 +23,19 @@ Examples:
 * https://cloud.google.com/build/docs/automating-builds/build-repos-from-github
 * https://cloud.google.com/source-repositories/docs/cloning-repositories
 
-Update: The Sourecgraph GCP build script failed and decided to press to other matters for now.
+Update: The Sourecgraph GCP build script failed. I think its because I forgot to add a disk for docker.
+
+Adding disk for docker... reset instance. Maybe there is easier way to restart the start up script ?
+
+`sudo lsblk` check which volumes are mounted
+
+# Follow the status of the user data script you provided earlier
+`tail -c +0 -f /var/log/syslog | grep startup-script`
+
+# (Once the user data script completes) monitor the health of the "sourcegraph-frontend" container
+`docker ps --filter="name=sourcegraph-frontend-0"`
+
+* https://cloud.google.com/compute/docs/disks/add-persistent-disk#console
 
 
 ### Authenticating to Google Cloud SDK
@@ -117,6 +129,29 @@ In the New Relic Host UI you should see the changes in the Activity Stream:
 
 ![image](https://user-images.githubusercontent.com/27694443/163326114-54c74f88-0427-4d1d-8bed-3df24605cb4e.png)
 
+
+#### Fixing Sourcegraph install
+
+Long story short I forgot to add a docker volume. The start up script failed. I added the volume... how to get to root user where sourcegraph repo lives:
+
+```
+giselle@instance-1:~$ sudo -i
+root@instance-1:~# ls
+deploy-sourcegraph-docker
+```
+Script fails because directory is not empty. Trying again and tail logs.
+
+`rm -r deploy-sourcegraph-docker/`
+
+Seems I should have paid closer attention to number of CPUs when making the VM 😆
+
+```
+Apr 14 07:22:40 instance-1 GCEMetadataScripts[2396]: 2022/04/14 07:22:40 GCEMetadataScripts: startup-script: ERROR: for zoekt-indexserver-0  Cannot create container for service zoekt-indexserver-0: Range of CPUs is from 0.01 to 4.00, as there are only 4 CPUs available|
+```
+Interesting!! The my forked sourcegraph version had an infra set up in it and it seems to override the other infra file?
+The host is now what I had set up before and the change is seen in Infra logs:
+
+![image](https://user-images.githubusercontent.com/27694443/163336203-65ef15a9-c93e-4c5e-bd12-8820a47a3923.png)
 
 
 
