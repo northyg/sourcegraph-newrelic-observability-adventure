@@ -11,6 +11,7 @@ Sourcegraph comes pre-built with Grafana dashboards that are powered by Promethe
 
 * [Set up Sourcegraph dev environment](develop-sourcegraph.md)
 * [Instrument the Infrastructure agent locally](instrument-infra-locally.md)
+* [Instrument the Infrastructure agent on GCP](instrument-infra-gcp.md)
 * Create cool Dashboards
 * Add alerting
 
