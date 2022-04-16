@@ -32,7 +32,7 @@ Attempted manual install
 
 To access the database in Sourcegraph run:
 
-` sudo -i`
+` sudo -i` or `sudo su`
 `docker exec -it pgsql psql -U sg`
 
 Run the steps from the aforementationed doc to create user in db
