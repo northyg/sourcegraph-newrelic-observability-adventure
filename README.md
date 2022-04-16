@@ -32,3 +32,30 @@ Sourcegraph comes pre-built with Grafana dashboards that are powered by Promethe
 * Sourcegraph docker-compose deployment
 * Visual Studio Code
 * [Docker in Visual Studio Code Extension](https://code.visualstudio.com/docs/containers/overview)
+
+### Summary
+
+* GCP Ubuntu VM hosting Sourcegraph Docker-compose instance
+  * Connect forked Github repo to GCP VM and clone repo
+  *  Infrastructure Agent
+  *  Infrastrucure Log forwarding
+  *  New Relic + GCP integration
+  *  GCP Logs forwarded to New Relic
+  *  Attempted Redis and Postgres OHI
+  *  Golden Alerts
+*  Docker Desktop run applications and c
+  *  Brawl cards - Python Agent
+    *  Python Flask web app 
+    *  Python script generating fake traffic
+  *  Cards - Infra + Python Agent
+    *  Python Flask web app w/ Docker and Postgres DB example
+    *  Python script generating fake traffic
+  *  Synthetics private minion
+    * Was attempting to run Synthetics checks on local host  
+  *  Infrastructure Agent run as container
+    * Sourcegraph dev build. Added new container and build.sh
+    * Sourcegraph docker-compose. Added it to docker-compose.yml to run at startup  
+* Synthetics check
+  * Endpoint availabiity scripted API for Nerdgraph API https://api.newrelic.com/graphql
+  * 
+  *  
