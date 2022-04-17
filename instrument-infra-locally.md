@@ -1,6 +1,6 @@
-### Instrument the Infrastructure Agent with Sourcegraph Docker-Compose deployment
+### Instrument the Infrastructure Agent with Sourcegraph Docker-Compose and Docker Desktop
 
-Goal was to add the Infrastructure agent to a Sourcegraph Docker-compose instance that was running locally in Docker Desktop. Perhaps not the best way, but this is one way that worked for me!
+Goal was to add the Infrastructure agent to a Sourcegraph Docker-compose instance that was running locally in Docker Desktop. 
 
 #### Pre-req / things I used
 
@@ -94,6 +94,6 @@ I. Finally, check for your data in New Relic! Navigate to Infrastructure -> Host
 
 Pro: Was relatively easy to install!
 
-Con: The agent can see the other Sourcegraph services but cannot see specifics inside of them like CPU usage, utilization, etc. Instead it reports on them as processes. For instance, all of Sourcegraph's services like Grafana, Jaeger, Gitserver, etc show up in the list. But when going to the Host > Containers > the metrics come in as 0%'s. After a lot of internet searching, this seems to be a limitation of running the agent as a container?
+Con: The agent can see the other Sourcegraph services but cannot see specifics inside of them like CPU usage, utilization, etc. Instead it reports on them as processes. For instance, all of Sourcegraph's services like Grafana, Jaeger, Gitserver, etc show up in the list. _This is a limitation of running the agent in Docker Desktop. When installing on VM with Ubuntu Linux & Sourcegraph, the container metrics were visible._
 
 
