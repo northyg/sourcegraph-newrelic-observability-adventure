@@ -57,5 +57,4 @@ Sourcegraph comes pre-built with Grafana dashboards that are powered by Promethe
     * Sourcegraph docker-compose. Added it to docker-compose.yml to run at startup  
 * Synthetics check
   * Endpoint availabiity scripted API for Nerdgraph API https://api.newrelic.com/graphql
-  * 
-  *  
+  * Various other endpoints...
