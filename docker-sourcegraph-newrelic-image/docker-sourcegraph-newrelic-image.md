@@ -8,4 +8,4 @@ This is assuming you alreadh have the SG dev environment set up and good to go! 
 * Add a new directory with whatever name you want. I added `nr-sg`
 * Within that directory, add a new Dockerfile, newrelic-infra.yml, and build.sh
 
-* I was not able to "3. Add an image to the automated builds pipeline by adding it to...." part, however I could still spin up the docker image.
+* I was not able to "3. Add an image to the automated builds pipeline by adding it to...." part, however I could still spin up the docker image and report data to New Relic.
