@@ -4,6 +4,7 @@
 
 ## Doc about Rest API https://docs.newrelic.com/docs/apis/rest-api-v2/get-started/introduction-new-relic-rest-api-v2
 ## Link to the API explorer https://rpm.newrelic.com/api/explore/api
+## https://www.youtube.com/watch?v=HPeXZubcZ7o
 ## You will need: USER API key
 ## Then get APM app ID, and use it to post a deployment marker
 ## Deployments have required fields and optional. You can customize to use env variables and git sha, etc
